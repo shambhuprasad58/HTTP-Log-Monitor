@@ -18,7 +18,7 @@ public class Utility {
             section = url.replaceFirst("http://", "~___~");
             String[] parts = section.split("/");
             if(parts.length > 1)
-                section = parts[0] + parts[1];
+                section = parts[0] + "/" + parts[1];
             else
                 section = parts[0];
             section = section.replace("~___~", "http://");

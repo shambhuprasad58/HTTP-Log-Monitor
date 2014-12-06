@@ -38,7 +38,7 @@ public class AlertTracker implements Runnable
     {
         while(true)
         {
-            while(alertURLQueue.size() == 0)
+            while(alertURLQueue.isEmpty())
             {
                 try {
                     Thread.sleep(5*1000);
@@ -55,17 +55,19 @@ public class AlertTracker implements Runnable
                 }
             }
             HttpObject lastURL;
-            while(true)
+            while(!alertURLQueue.isEmpty())
             {
                 try 
                 {
-                    lastURL = alertURLQueue.take();
+                    lastURL = alertURLQueue.peek();
                     long diff = new Date().getTime() - lastURL.getHittingTime().getTime();
                     if(diff < (alertGapInMillisecond-100))
                     {
                         Thread.sleep(alertGapInMillisecond - diff -100);
+                        alertURLQueue.remove();
                         break;
                     }
+                    alertURLQueue.remove();
                 } catch (InterruptedException ex) {
                     Logger.getLogger(AlertTracker.class.getName()).log(Level.SEVERE, null, ex);
                 }
