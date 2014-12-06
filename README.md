@@ -10,3 +10,6 @@ Whenever the total traffic drops again below that value on average for the past 
 Make sure all messages showing when alerting thresholds are crossed remain visible on the page for historical reasons.
 Write a test for the alerting logic
 Explain how you’d improve on this application design
+
+Instruction to run:
+Update the path variable in ./nbproject/configs/jnetpcap.properties file with absolute path of jnetpcap library that comes with this project and open the project in Netbeans to run.
