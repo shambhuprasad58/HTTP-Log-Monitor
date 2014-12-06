@@ -13,3 +13,4 @@ Explain how you’d improve on this application design
 
 Instruction to run:
 Update the path variable in ./nbproject/configs/jnetpcap.properties file with absolute path of jnetpcap library that comes with this project and open the project in Netbeans to run.
+Use Netbeans 8.0 or above and run netbeans as root.

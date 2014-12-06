@@ -5,7 +5,6 @@
  */
 package httplogmonitor;
 
-import com.sun.org.glassfish.external.statistics.Statistic;
 import httplogmonitorutil.Alert;
 import httplogmonitorutil.HttpObject;
 import httplogmonitorutil.Statistics;
